@@ -1,19 +1,20 @@
 Brainlox Course Search API 🧠
+
 A specialized RESTful API that performs semantic search over technical course data from Brainlox. This project uses LangChain for document orchestration, Google Generative AI for embeddings, and FAISS for efficient vector similarity search.
 
 🚀 Overview
+
 Traditional keyword search often fails to find relevant content if the exact words don't match. This API implements Semantic Search, allowing users to find courses based on the intent and context of their query (e.g., searching for "building apps" will find "Flutter" or "React Native" courses even if the word "app" isn't in the title).
 
 Key Features
-Automated Ingestion: Scrapes technical course data directly from Brainlox.
 
-High-Dimensional Embeddings: Utilizes Google's text-embedding-004 model.
-
-Vector Indexing: Uses FAISS (Facebook AI Similarity Search) for sub-millisecond retrieval.
-
-Flask Integration: Provides a clean POST endpoint for easy integration.
+-Automated Ingestion: Scrapes technical course data directly from Brainlox.
+-High-Dimensional Embeddings: Utilizes Google's text-embedding-004 model.
+-Vector Indexing: Uses FAISS (Facebook AI Similarity Search) for sub-millisecond retrieval.
+-Flask Integration: Provides a clean POST endpoint for easy integration.
 
 🛠️ Technical Stack
+
 Backend: Flask, Flask-RESTful
 
 LLM Framework: LangChain
@@ -62,11 +63,7 @@ Request Body:
 | :--- | :--- | :--- |
 | query | string | The search term or question. |
 
-Example Response:
 
-JSON
-[
-  {
     "document": "Mastering Flutter for Cross-Platform Apps...",
     "score": 0.1245
   },
