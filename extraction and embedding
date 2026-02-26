@@ -20,7 +20,7 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
 docs = text_splitter.split_documents(documents)
 
 # Set your Google Generative AI API key
-gen_ai_key = "AIzaSyAhU_PC7CzihSUyq61BWVEszhD9HWSlm1s"  # Replace with your actual API key
+gen_ai_key = "Replace with your actual API key"  
 genai.configure(api_key=gen_ai_key)
 
 # Generate embeddings for the document chunks
